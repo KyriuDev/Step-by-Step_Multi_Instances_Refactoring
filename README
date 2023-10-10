@@ -1,0 +1,17 @@
+Execute the program: ./gradlew main --args="<path_to_your_bpmn_file> <IAT>"
+
+Possible combinations of a task which creates only dependencies between the elected task and other tasks:
+    - A task can be put in parallel of the set of abstract graphs of the current cluster
+    - A task can be put in sequence at the beginning/end of any combination of abstract graphs of size >= 2
+
+    - A task can be put in parallel of any ordered combination of node of each abstract graph of the cluster
+    - A task can be put in sequence at the beginning/end or between each node of each abstract graph of the cluster
+
+    - A task can be put in sequence at the beginning/end of any combination of task/subgraph of any abstract node
+
+    - For choices:
+        - Generate all combinations for each path of the choice
+        - Make a cartesian product between all combinations of each path to generate the entire set of combinations
+
+    - For loops:
+        - Do not do anything
