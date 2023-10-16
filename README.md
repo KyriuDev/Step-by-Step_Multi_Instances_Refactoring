@@ -15,9 +15,9 @@ For example, if task "T1" must be executed before task "T2", the following tuple
 A file "global_infos_current.inf" can be included in the directory to indicate the IAT, the number of instances,
 and the pool of shared resources available.
 If specified, this file must contain the following elements:
-- On the first line of the file: "- IAT: $RealDistribution type (const, normal, exp, ...)$, $first parameter of the distribution$, $second parameter of the distribution$"
-- On the second line of the file: "- Nb instances: $number of instances required$"
-- On the third line of the file: "- Global resources: <$nb replicas of resource one$ $name of resource one$ ($cost of resource one$), ...>"
+- On the first line of the file: "- IAT: [RealDistribution type (const, normal, exp, ...)], [first_parameter_of_the_distribution], [second_parameter_of_the_distribution]"
+- On the second line of the file: "- Nb instances: [number of instances required]"
+- On the third line of the file: "- Global resources: <[nb replicas of resource one] [name of resource one] ([cost of resource one]), ...>"
 
 The main class is the class main/Main.java.
 The tool can be started using the command "./gradlew main --args="working_directory"" where "working_directory"
